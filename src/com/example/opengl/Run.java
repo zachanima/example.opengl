@@ -31,4 +31,10 @@ public class Run extends Activity {
       super.onResume();
       glSurfaceView.onResume();
     }
+    
+    @Override
+    protected void onPause() {
+      super.onPause();
+      glSurfaceView.onPause();
+    }
 }
