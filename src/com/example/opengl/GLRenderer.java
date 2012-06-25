@@ -7,10 +7,10 @@ import android.opengl.GLU;
 import android.opengl.GLSurfaceView.Renderer;
 
 public class GLRenderer implements Renderer {
-  private Triangle triangle;
+  private Square square;
   
   public GLRenderer() {
-    this.triangle = new Triangle();
+    this.square = new Square();
   }
 
   @Override
@@ -19,7 +19,7 @@ public class GLRenderer implements Renderer {
     gl.glLoadIdentity();
     gl.glTranslatef(0.0f, 0.0f, -5.0f);
     
-    triangle.draw(gl);
+    square.draw(gl);
   }
 
   @Override
