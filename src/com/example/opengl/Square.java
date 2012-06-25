@@ -14,7 +14,8 @@ public class Square {
      1.0f, -1.0f, 0.0f,
      1.0f,  1.0f, 0.0f
   };
-  
+
+
   public Square() {
     // Allocate 4 bytes per float.
     ByteBuffer vertexByteBuffer = ByteBuffer.allocateDirect(vertices.length * 4);
@@ -24,7 +25,8 @@ public class Square {
     vertexBuffer.put(vertices);
     vertexBuffer.position(0);
   }
-  
+
+
   public void draw(GL10 gl) {
     gl.glEnableClientState(GL10.GL_VERTEX_ARRAY);
     gl.glColor4f(0.0f, 1.0f, 0.0f, 0.5f);
