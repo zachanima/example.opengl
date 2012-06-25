@@ -3,14 +3,17 @@ package com.example.opengl;
 import javax.microedition.khronos.egl.EGLConfig;
 import javax.microedition.khronos.opengles.GL10;
 
-import android.opengl.GLU;
+import android.content.Context;
 import android.opengl.GLSurfaceView.Renderer;
+import android.opengl.GLU;
 
 public class GLRenderer implements Renderer {
+  private Context context;
   private Square square;
 
 
-  public GLRenderer() {
+  public GLRenderer(Context context) {
+    this.context = context;
     this.square = new Square();
   }
 
@@ -42,5 +45,14 @@ public class GLRenderer implements Renderer {
 
   @Override
   public void onSurfaceCreated(GL10 gl, EGLConfig config) {
+     square.loadGLTexture(gl, this.context);
+     
+     gl.glEnable(GL10.GL_TEXTURE_2D);
+     gl.glShadeModel(GL10.GL_SMOOTH);
+     gl.glClearColor(0.0f, 0.0f, 0.0f, 0.5f);
+     gl.glClearDepthf(1.0f);
+     gl.glEnable(GL10.GL_DEPTH_TEST);
+     gl.glDepthFunc(GL10.GL_LEQUAL);
+     gl.glHint(GL10.GL_PERSPECTIVE_CORRECTION_HINT, GL10.GL_NICEST);
   }
 }
