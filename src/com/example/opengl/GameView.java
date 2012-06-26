@@ -18,9 +18,8 @@ public class GameView extends GLSurfaceView {
   
   
   @Override
-  public boolean onTouchEvent(MotionEvent event) {
-    final int action = event.getAction() & MotionEvent.ACTION_MASK;
-    switch (action) {
+  public boolean onTouchEvent(final MotionEvent event) {
+    switch (event.getAction()) {
       case MotionEvent.ACTION_DOWN:
         renderer.ship.omega = 0.01f;
         break;
