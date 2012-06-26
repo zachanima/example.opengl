@@ -11,7 +11,6 @@ public class GameRenderer implements Renderer {
   public GameRenderer(Context context) {
     this.context = context;
     this.ship = new Ship();
-    this.square = new Square();
   }
 
 
@@ -24,10 +23,6 @@ public class GameRenderer implements Renderer {
     gl.glTranslatef(0.0f, 0.0f, -20.0f);
     
     ship.draw(gl);
-    
-    gl.glTranslatef(4.0f, 0.0f, 0.0f);
-    gl.glScalef(0.1f, 0.1f, 0.1f);
-    square.draw(gl);
   }
 
 
@@ -61,6 +56,5 @@ public class GameRenderer implements Renderer {
   
   
   private Context context;
-  private Square square;
   public Ship ship;
 }
