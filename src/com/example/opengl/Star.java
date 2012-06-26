@@ -22,6 +22,6 @@ public class Star extends Square {
   }
   
   
-  private static final float v = 0.1f;
+  private static final float v = 0.001f;
   private float r[] = { 0.0f, 0.0f }; // Position, m.
 }
