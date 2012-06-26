@@ -20,7 +20,11 @@ public class GameView extends GLSurfaceView {
   public boolean onTouchEvent(final MotionEvent event) {
     switch (event.getAction()) {
       case MotionEvent.ACTION_DOWN:
-        renderer.rotation += 1.0;
+        renderer.ship.omega = 1.0f;
+        break;
+
+      case MotionEvent.ACTION_UP:
+        renderer.ship.omega = 0.0f;
         break;
         
       default:

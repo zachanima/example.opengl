@@ -19,8 +19,6 @@ public class GameRenderer implements Renderer {
     gl.glClear(GL10.GL_COLOR_BUFFER_BIT | GL10.GL_DEPTH_BUFFER_BIT);
     gl.glLoadIdentity();
 
-    gl.glRotatef(rotation, 0.0f, 0.0f, 1.0f);
-
     ship.draw(gl);
   }
 
@@ -55,6 +53,5 @@ public class GameRenderer implements Renderer {
   
   
   private Context context;
-  private Ship ship;
-  public float rotation = 0.0f;
+  public Ship ship;
 }
