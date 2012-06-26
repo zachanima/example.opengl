@@ -10,7 +10,7 @@ public class Star extends Square {
   
   
   public void update(long ms) {
-    r[1] += v;
+    r[1] -= v;
   }
   
   
