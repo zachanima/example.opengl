@@ -35,14 +35,14 @@ public class GameRenderer implements Renderer {
   @Override
   public void onDrawFrame(GL10 gl) {
     /*update();
-    
+    */
     gl.glClear(GL10.GL_COLOR_BUFFER_BIT | GL10.GL_DEPTH_BUFFER_BIT);
     gl.glLoadIdentity();
     gl.glTranslatef(0.0f, 0.0f, -20.0f);
     
     for (int i = 0; i < stars.size(); i++) {
       stars.get(i).draw(gl);
-    }*/
+    }
     ship.draw(gl);
   }
 
@@ -64,7 +64,7 @@ public class GameRenderer implements Renderer {
 
   @Override
   public void onSurfaceCreated(GL10 gl, EGLConfig config) {
-     //ship.loadGLTexture(gl, this.context);
+     ship.loadGLTexture(gl, this.context);
      
      gl.glEnable(GL10.GL_TEXTURE_2D);
      gl.glShadeModel(GL10.GL_SMOOTH);
