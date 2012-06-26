@@ -9,13 +9,13 @@ import android.opengl.GLU;
 
 public class GameRenderer implements Renderer {
   private Context context;
-  private Square square;
+  private Ship ship;
   private float rotation = 0.0f;
 
 
   public GameRenderer(Context context) {
     this.context = context;
-    this.square = new Square();
+    this.ship = new Ship();
   }
 
 
@@ -25,12 +25,9 @@ public class GameRenderer implements Renderer {
     gl.glLoadIdentity();
 
     gl.glRotatef(rotation, 0.0f, 0.0f, 1.0f);
-    gl.glScalef(2.0f, 1.0f, 1.0f);
-    gl.glTranslatef(-0.5f, 0.5f, -20.0f);
-    
     rotation += 1.0f;
 
-    square.draw(gl);
+    ship.draw(gl);
   }
 
 
@@ -51,7 +48,7 @@ public class GameRenderer implements Renderer {
 
   @Override
   public void onSurfaceCreated(GL10 gl, EGLConfig config) {
-     square.loadGLTexture(gl, this.context);
+     ship.loadGLTexture(gl, this.context);
      
      gl.glEnable(GL10.GL_TEXTURE_2D);
      gl.glShadeModel(GL10.GL_SMOOTH);
