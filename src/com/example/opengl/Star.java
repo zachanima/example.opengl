@@ -20,7 +20,7 @@ public class Star extends Square {
   public void draw(GL10 gl) {
     gl.glPushMatrix();
     gl.glTranslatef(r[0], r[1], 0.0f);
-    gl.glScalef(0.1f, 0.1f, 0.1f);
+    gl.glScalef(0.05f, 0.1f, 0.05f);
     super.draw(gl);
     gl.glPopMatrix();
   }
