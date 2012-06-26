@@ -18,6 +18,6 @@ public class Ship extends Square {
   }
   
   
-  private float r[] = { 0.0f, 0.0f }; // Position, m.
+  private float r[] = { 0.0f, -10.0f }; // Position, m.
   public float v = 0.0f; // Velocity, m/s.
 }
