@@ -22,8 +22,8 @@ public class GLRenderer implements Renderer {
   public void onDrawFrame(GL10 gl) {
     gl.glClear(GL10.GL_COLOR_BUFFER_BIT | GL10.GL_DEPTH_BUFFER_BIT);
     gl.glLoadIdentity();
-    gl.glTranslatef(-0.5f, 0.5f, -5.0f);
     gl.glScalef(2.0f, 1.0f, 1.0f);
+    gl.glTranslatef(-0.5f, 0.5f, -5.0f);
 
     square.draw(gl);
   }
