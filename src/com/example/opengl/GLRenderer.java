@@ -10,6 +10,7 @@ import android.opengl.GLU;
 public class GLRenderer implements Renderer {
   private Context context;
   private Square square;
+  private float rotation = 0.0f;
 
 
   public GLRenderer(Context context) {
@@ -23,9 +24,11 @@ public class GLRenderer implements Renderer {
     gl.glClear(GL10.GL_COLOR_BUFFER_BIT | GL10.GL_DEPTH_BUFFER_BIT);
     gl.glLoadIdentity();
 
-    gl.glRotatef(45.0f, 0.0f, 0.0f, 1.0f);
+    gl.glRotatef(rotation, 0.0f, 0.0f, 1.0f);
     gl.glScalef(2.0f, 1.0f, 1.0f);
     gl.glTranslatef(-0.5f, 0.5f, -5.0f);
+    
+    rotation += 0.1f;
 
     square.draw(gl);
   }
