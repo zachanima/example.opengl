@@ -42,8 +42,8 @@ public class GameRenderer implements Renderer {
     
     for (int i = 0; i < stars.size(); i++) {
       stars.get(i).draw(gl);
-    }
-    ship.draw(gl);*/
+    }*/
+    ship.draw(gl);
   }
 
 
