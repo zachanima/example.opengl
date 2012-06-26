@@ -9,10 +9,6 @@ public class GameView extends GLSurfaceView {
   public GameView(Context context) {
     super(context);
     this.context = context;
-    
-    // Enable PNG transparency.
-    setEGLConfigChooser(8, 8, 8, 8, 0, 0);
-    getHolder().setFormat(PixelFormat.RGBA_8888); 
   }
   
   
