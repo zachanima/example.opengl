@@ -1,7 +1,6 @@
 package com.example.opengl;
 
 import android.content.Context;
-import android.graphics.PixelFormat;
 import android.opengl.GLSurfaceView;
 import android.view.MotionEvent;
 
