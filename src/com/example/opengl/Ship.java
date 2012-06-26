@@ -3,8 +3,12 @@ package com.example.opengl;
 import javax.microedition.khronos.opengles.GL10;
 
 public class Ship extends Square {
+  public void update(long ms) {
+    r[0] += v * ms;
+  }
+  
+  
   public void draw(GL10 gl) {
-    r[0] += v;
     gl.glPushMatrix();
     gl.glScalef(2.0f, 1.0f, 1.0f);
     gl.glTranslatef(r[0], r[1], 0.0f);

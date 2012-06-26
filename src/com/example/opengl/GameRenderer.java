@@ -12,13 +12,20 @@ public class GameRenderer implements Renderer {
     this.context = context;
     this.ship = new Ship();
   }
+  
+  
+  public void update(long ms) {
+    ship.update(ms);
+  }
 
 
   @Override
   public void onDrawFrame(GL10 gl) {
+    long time = System.currentTimeMillis();
+    update(time - this.time);
+    this.time = time;
     gl.glClear(GL10.GL_COLOR_BUFFER_BIT | GL10.GL_DEPTH_BUFFER_BIT);
     gl.glLoadIdentity();
-
 
     gl.glTranslatef(0.0f, 0.0f, -20.0f);
     
@@ -56,5 +63,6 @@ public class GameRenderer implements Renderer {
   
   
   private Context context;
+  private long time;
   public Ship ship;
 }
