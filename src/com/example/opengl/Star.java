@@ -10,7 +10,7 @@ public class Star extends Square {
   
   
   public void update(long ms) {
-    r[0] += v * (float)ms / 1000.0f;
+    r[0] += v;
   }
   
   
@@ -23,5 +23,5 @@ public class Star extends Square {
   
   
   private float r[] = { 0.0f, 0.0f }; // Position, m.
-  private float v = 0.000000001f;
+  private float v = 0.001f;
 }
