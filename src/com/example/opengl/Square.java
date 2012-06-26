@@ -60,10 +60,10 @@ public class Square {
   private FloatBuffer vertexBuffer;
   private FloatBuffer textureBuffer;
   private float vertices[] = {
-    -0.5f,  0.5f, 0.0f,
     -0.5f, -0.5f, 0.0f,
-     0.5f,  0.5f, 0.0f,
-     0.5f, -0.5f, 0.0f
+    -0.5f,  0.5f, 0.0f,
+     0.5f, -0.5f, 0.0f,
+     0.5f,  0.5f, 0.0f
   };
   private float texture[] = {
     0.0f, 1.0f,
