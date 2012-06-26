@@ -4,8 +4,10 @@ import javax.microedition.khronos.opengles.GL10;
 
 public class Star extends Square {
   public Star() {
+    /*
     r[0] = (float)Math.random() * 1.0f - 0.5f;
     r[1] = (float)Math.random() * 1.0f - 0.5f;
+    */
   }
   
   

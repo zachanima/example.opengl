@@ -21,7 +21,7 @@ public class GameRenderer implements Renderer {
     this.time = time;
     
     ship.update(ms);
-    star.update(ms);
+    // star.update(ms);
   }
 
 
