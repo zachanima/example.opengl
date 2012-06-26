@@ -11,6 +11,7 @@ public class GameRenderer implements Renderer {
   public GameRenderer(Context context) {
     this.context = context;
     this.ship = new Ship();
+    this.star = new Star();
   }
   
   
@@ -20,6 +21,7 @@ public class GameRenderer implements Renderer {
     this.time = time;
     
     ship.update(ms);
+    star.update(ms);
   }
 
 
@@ -32,6 +34,7 @@ public class GameRenderer implements Renderer {
     gl.glTranslatef(0.0f, 0.0f, -20.0f);
     
     ship.draw(gl);
+    star.draw(gl);
   }
 
 
@@ -67,4 +70,5 @@ public class GameRenderer implements Renderer {
   private Context context;
   private long time;
   public Ship ship;
+  private Star star;
 }
