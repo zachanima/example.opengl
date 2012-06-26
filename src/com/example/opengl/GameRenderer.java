@@ -12,11 +12,11 @@ import android.opengl.GLU;
 public class GameRenderer implements Renderer {
   public GameRenderer(Context context) {
     this.context = context;
-    this.ship = new Ship();
+    /*this.ship = new Ship();
     this.stars = new ArrayList<Star>();
     for (int i = 0; i < 256; i++) {
       this.stars.add(new Star());
-    }
+    }*/
   }
   
   
@@ -25,16 +25,16 @@ public class GameRenderer implements Renderer {
     final long ms = time - this.time;
     this.time = time;
     
-    ship.update(ms);
+    /*ship.update(ms);
     for (int i = 0; i < stars.size(); i++) {
       stars.get(i).update(ms);
-    }
+    }*/
   }
 
 
   @Override
   public void onDrawFrame(GL10 gl) {
-    update();
+    /*update();
     
     gl.glClear(GL10.GL_COLOR_BUFFER_BIT | GL10.GL_DEPTH_BUFFER_BIT);
     gl.glLoadIdentity();
@@ -43,7 +43,7 @@ public class GameRenderer implements Renderer {
     for (int i = 0; i < stars.size(); i++) {
       stars.get(i).draw(gl);
     }
-    ship.draw(gl);
+    ship.draw(gl);*/
   }
 
 
@@ -64,7 +64,7 @@ public class GameRenderer implements Renderer {
 
   @Override
   public void onSurfaceCreated(GL10 gl, EGLConfig config) {
-     ship.loadGLTexture(gl, this.context);
+     //ship.loadGLTexture(gl, this.context);
      
      gl.glEnable(GL10.GL_TEXTURE_2D);
      gl.glShadeModel(GL10.GL_SMOOTH);
