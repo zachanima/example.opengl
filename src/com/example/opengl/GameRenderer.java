@@ -61,4 +61,9 @@ public class GameRenderer implements Renderer {
      gl.glDepthFunc(GL10.GL_LEQUAL);
      gl.glHint(GL10.GL_PERSPECTIVE_CORRECTION_HINT, GL10.GL_NICEST);
   }
+  
+  
+  public void magic() {
+    rotation = 0.0f;
+  }
 }
