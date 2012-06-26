@@ -28,7 +28,7 @@ public class GLRenderer implements Renderer {
     gl.glScalef(2.0f, 1.0f, 1.0f);
     gl.glTranslatef(-0.5f, 0.5f, -20.0f);
     
-    rotation += 0.1f;
+    rotation += 1.0f;
 
     square.draw(gl);
   }
