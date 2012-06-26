@@ -13,6 +13,7 @@ public class GameRenderer implements Renderer {
   public GameRenderer(Context context) {
     this.context = context;
     this.ship = new Ship();
+    this.stars = new ArrayList<Star>();
     for (int i = 0; i < 256; i++) {
       this.stars.add(new Star());
     }
