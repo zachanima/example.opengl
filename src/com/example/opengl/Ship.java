@@ -4,7 +4,7 @@ import javax.microedition.khronos.opengles.GL10;
 
 public class Ship extends Square {
   public void update(long ms) {
-    r[0] += v * ms;
+    r[0] += v * (float)ms / 1000.0f;
   }
   
   

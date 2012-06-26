@@ -14,19 +14,21 @@ public class GameRenderer implements Renderer {
   }
   
   
-  public void update(long ms) {
+  public void update() {
+    final long time = System.currentTimeMillis();
+    final long ms = time - this.time;
+    this.time = time;
+    
     ship.update(ms);
   }
 
 
   @Override
   public void onDrawFrame(GL10 gl) {
-    long time = System.currentTimeMillis();
-    update(time - this.time);
-    this.time = time;
+    update();
+    
     gl.glClear(GL10.GL_COLOR_BUFFER_BIT | GL10.GL_DEPTH_BUFFER_BIT);
     gl.glLoadIdentity();
-
     gl.glTranslatef(0.0f, 0.0f, -20.0f);
     
     ship.draw(gl);
