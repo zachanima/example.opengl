@@ -22,9 +22,9 @@ public class GameView extends GLSurfaceView {
     switch (event.getAction()) {
       case MotionEvent.ACTION_DOWN:
         if (event.getX() < getWidth() / 2) {
-          renderer.ship.v = -1.0f / 32.0f;
+          renderer.ship.v = -1.0f;
         } else {
-          renderer.ship.v = 1.0f / 32.0f;
+          renderer.ship.v = 1.0f;
         }
         break;
 
