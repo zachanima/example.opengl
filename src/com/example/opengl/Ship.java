@@ -12,12 +12,13 @@ public class Ship extends Square {
     gl.glPushMatrix();
     gl.glTranslatef(r[0], r[1], 0.0f);
     gl.glRotatef(v * 8, 0.0f, 1.0f, 0.0f);
+    gl.glTranslatef(-0.5f, 0.5f, 0.0f);
     gl.glScalef(2.0f, 1.0f, 1.0f);
     super.draw(gl);
     gl.glPopMatrix();
   }
   
   
-  private float r[] = { -0.5f, 0.5f }; // Position, m.
+  private float r[] = { 0.0f, 0.0f }; // Position, m.
   public float v = 0.0f; // Velocity, m/s.
 }
