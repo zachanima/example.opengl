@@ -25,8 +25,8 @@ public class GameRenderer implements Renderer {
     this.time = time;
     
     ship.update(ms);
-    for (Star star : stars) {
-      star.update(ms);
+    for (int i = 0; i < stars.size(); i++) {
+      stars.get(i).update(ms);
     }
   }
 
@@ -40,8 +40,8 @@ public class GameRenderer implements Renderer {
     gl.glTranslatef(0.0f, 0.0f, -20.0f);
     
     ship.draw(gl);
-    for (Star star : stars) {
-      star.draw(gl);
+    for (int i = 0; i < stars.size(); i++) {
+      stars.get(i).draw(gl);
     }
   }
 
