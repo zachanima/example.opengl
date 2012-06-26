@@ -17,8 +17,16 @@ public class GameView extends GLSurfaceView {
   }
   
   
-  public boolean onTouchEvent(MotionEvent event) {
-    renderer.magic();
+  public boolean onTouchEvent(final MotionEvent event) {
+    switch (event.getAction()) {
+      case MotionEvent.ACTION_DOWN:
+        renderer.rotation += 1.0;
+        break;
+        
+      default:
+        break;
+    }
+    
     return super.onTouchEvent(event);
   }
   

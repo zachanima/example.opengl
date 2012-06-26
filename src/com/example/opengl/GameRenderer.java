@@ -20,7 +20,6 @@ public class GameRenderer implements Renderer {
     gl.glLoadIdentity();
 
     gl.glRotatef(rotation, 0.0f, 0.0f, 1.0f);
-    rotation += 1.0f;
 
     ship.draw(gl);
   }
@@ -55,12 +54,7 @@ public class GameRenderer implements Renderer {
   }
   
   
-  public void magic() {
-    rotation = 0.0f;
-  }
-  
-  
   private Context context;
   private Ship ship;
-  private float rotation = 0.0f;
+  public float rotation = 0.0f;
 }
