@@ -22,8 +22,11 @@ public class GameRenderer implements Renderer {
 
 
     gl.glTranslatef(0.0f, 0.0f, -20.0f);
+    
     ship.draw(gl);
+    
     gl.glTranslatef(4.0f, 0.0f, 0.0f);
+    gl.glScalef(0.1f, 0.1f, 0.1f);
     square.draw(gl);
   }
 
