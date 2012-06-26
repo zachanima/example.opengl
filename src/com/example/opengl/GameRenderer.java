@@ -7,13 +7,13 @@ import android.content.Context;
 import android.opengl.GLSurfaceView.Renderer;
 import android.opengl.GLU;
 
-public class GLRenderer implements Renderer {
+public class GameRenderer implements Renderer {
   private Context context;
   private Square square;
   private float rotation = 0.0f;
 
 
-  public GLRenderer(Context context) {
+  public GameRenderer(Context context) {
     this.context = context;
     this.square = new Square();
   }

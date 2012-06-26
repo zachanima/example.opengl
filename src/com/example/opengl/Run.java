@@ -1,13 +1,12 @@
 package com.example.opengl;
 
 import android.app.Activity;
-import android.opengl.GLSurfaceView;
 import android.os.Bundle;
 import android.view.Window;
 import android.view.WindowManager;
 
 public class Run extends Activity {
-  private GLSurfaceView glSurfaceView;
+  private GameView gameView;
 
 
   @Override
@@ -19,25 +18,23 @@ public class Run extends Activity {
     // Full screen.
     getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
     
-    // Initiate OpenGL view, create instance with this activity.
-    glSurfaceView = new GLSurfaceView(this);
+    gameView = new GameView(this);
+    gameView.initialize();
     
-    // Set renderer as main.
-    glSurfaceView.setRenderer(new GLRenderer(this));
-    setContentView(glSurfaceView);
+    setContentView(gameView);
   }
 
 
   @Override
   protected void onResume() {
     super.onResume();
-    glSurfaceView.onResume();
+    gameView.onResume();
   }
 
 
   @Override
   protected void onPause() {
     super.onPause();
-    glSurfaceView.onPause();
+    gameView.onPause();
   }
 }
