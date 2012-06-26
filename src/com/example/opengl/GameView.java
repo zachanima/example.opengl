@@ -34,7 +34,7 @@ public class GameView extends GLSurfaceView {
         break;
     }
     
-    return super.onTouchEvent(event);
+    return true;
   }
   
   
