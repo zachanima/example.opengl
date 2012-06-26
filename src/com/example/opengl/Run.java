@@ -6,9 +6,6 @@ import android.view.Window;
 import android.view.WindowManager;
 
 public class Run extends Activity {
-  private GameView gameView;
-
-
   @Override
   public void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
@@ -37,4 +34,7 @@ public class Run extends Activity {
     super.onPause();
     gameView.onPause();
   }
+  
+
+  private GameView gameView;
 }

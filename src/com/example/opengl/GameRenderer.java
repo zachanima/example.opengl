@@ -8,11 +8,6 @@ import android.opengl.GLSurfaceView.Renderer;
 import android.opengl.GLU;
 
 public class GameRenderer implements Renderer {
-  private Context context;
-  private Ship ship;
-  private float rotation = 0.0f;
-
-
   public GameRenderer(Context context) {
     this.context = context;
     this.ship = new Ship();
@@ -63,4 +58,9 @@ public class GameRenderer implements Renderer {
   public void magic() {
     rotation = 0.0f;
   }
+  
+  
+  private Context context;
+  private Ship ship;
+  private float rotation = 0.0f;
 }

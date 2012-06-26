@@ -5,10 +5,6 @@ import android.opengl.GLSurfaceView;
 import android.view.MotionEvent;
 
 public class GameView extends GLSurfaceView {
-  private GameRenderer renderer;
-  private Context context;
-
-  
   public GameView(Context context) {
     super(context);
     this.context = context;
@@ -25,4 +21,8 @@ public class GameView extends GLSurfaceView {
     renderer.magic();
     return super.onTouchEvent(event);
   }
+  
+  
+  private GameRenderer renderer;
+  private Context context;
 }

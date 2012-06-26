@@ -12,23 +12,6 @@ import android.graphics.BitmapFactory;
 import android.opengl.GLUtils;
 
 public class Square {
-  private FloatBuffer vertexBuffer;
-  private FloatBuffer textureBuffer;
-  private float vertices[] = {
-     0.0f, -1.0f, 0.0f,
-     0.0f,  0.0f, 0.0f,
-     1.0f, -1.0f, 0.0f,
-     1.0f,  0.0f, 0.0f
-  };
-  private float texture[] = {
-    0.0f, 1.0f,
-    0.0f, 0.0f,
-    1.0f, 1.0f,
-    1.0f, 0.0f
-  };
-  private int[] textures = new int[1];
-
-
   public Square() {
     // Allocate 4 bytes per float.
     ByteBuffer byteBuffer = ByteBuffer.allocateDirect(vertices.length * 4);
@@ -72,4 +55,21 @@ public class Square {
     
     bitmap.recycle();
   }
+  
+
+  private FloatBuffer vertexBuffer;
+  private FloatBuffer textureBuffer;
+  private float vertices[] = {
+     0.0f, -1.0f, 0.0f,
+     0.0f,  0.0f, 0.0f,
+     1.0f, -1.0f, 0.0f,
+     1.0f,  0.0f, 0.0f
+  };
+  private float texture[] = {
+    0.0f, 1.0f,
+    0.0f, 0.0f,
+    1.0f, 1.0f,
+    1.0f, 0.0f
+  };
+  private int[] textures = new int[1];
 }
