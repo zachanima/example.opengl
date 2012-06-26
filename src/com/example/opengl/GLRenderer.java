@@ -26,7 +26,7 @@ public class GLRenderer implements Renderer {
 
     gl.glRotatef(rotation, 0.0f, 0.0f, 1.0f);
     gl.glScalef(2.0f, 1.0f, 1.0f);
-    gl.glTranslatef(-0.5f, 0.5f, -5.0f);
+    gl.glTranslatef(-0.5f, 0.5f, -20.0f);
     
     rotation += 0.1f;
 
