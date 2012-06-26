@@ -40,10 +40,10 @@ public class GameRenderer implements Renderer {
     gl.glLoadIdentity();
     gl.glTranslatef(0.0f, 0.0f, -20.0f);
     
-    ship.draw(gl);
     for (int i = 0; i < stars.size(); i++) {
       stars.get(i).draw(gl);
     }
+    ship.draw(gl);
   }
 
 
