@@ -1,5 +1,7 @@
 package com.example.opengl;
 
+import java.util.ArrayList;
+
 import javax.microedition.khronos.egl.EGLConfig;
 import javax.microedition.khronos.opengles.GL10;
 
@@ -11,7 +13,9 @@ public class GameRenderer implements Renderer {
   public GameRenderer(Context context) {
     this.context = context;
     this.ship = new Ship();
-    this.star = new Star();
+    for (int i = 0; i < 256; i++) {
+      this.stars.add(new Star());
+    }
   }
   
   
@@ -34,7 +38,9 @@ public class GameRenderer implements Renderer {
     gl.glTranslatef(0.0f, 0.0f, -20.0f);
     
     ship.draw(gl);
-    star.draw(gl);
+    for (Star star : stars) {
+      star.draw(gl);
+    }
   }
 
 
@@ -70,5 +76,5 @@ public class GameRenderer implements Renderer {
   private Context context;
   private long time;
   public Ship ship;
-  private Star star;
+  private ArrayList<Star> stars;
 }

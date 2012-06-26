@@ -4,13 +4,13 @@ import javax.microedition.khronos.opengles.GL10;
 
 public class Star extends Square {
   public Star() {
-    r[0] = (float)Math.random() * 1.0f - 0.5f;
-    r[1] = (float)Math.random() * 1.0f - 0.5f;
+    r[0] = (float)Math.random() * 100.0f - 50.0f;
+    r[1] = (float)Math.random() * 100.0f - 50.0f;
   }
   
   
   public void update(long ms) {
-    r[0] += v;
+    r[1] += v;
   }
   
   
@@ -23,5 +23,5 @@ public class Star extends Square {
   
   
   private float r[] = { 0.0f, 0.0f }; // Position, m.
-  private float v = 0.001f;
+  private float v = 0.1f;
 }
